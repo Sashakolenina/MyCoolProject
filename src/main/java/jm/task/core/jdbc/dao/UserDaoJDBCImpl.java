@@ -11,7 +11,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public void dropUsersTable() {
         String sql = "DROP TABLE USERS";
         try (Connection connection = Util.getInstance().getConnection();
-        Statement statement = connection.createStatement()){
+             Statement statement = connection.createStatement()){
             statement.executeUpdate(sql);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -57,7 +57,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Connection connection = Util.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setLong(1, id);
-           statement.executeUpdate();
+            statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -98,4 +98,3 @@ public class UserDaoJDBCImpl implements UserDao {
         }
     }
 }
-
