@@ -17,3 +17,5 @@ public interface UserDao {
 
     void cleanUsersTable();
 }
+
+
