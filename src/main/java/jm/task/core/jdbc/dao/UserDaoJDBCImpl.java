@@ -15,7 +15,7 @@ public class UserDaoJDBCImpl implements UserDao {
         Statement statement = connection.createStatement()){
             statement.executeUpdate(sql);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+          e.printStackTrace();
         }
 
     }
@@ -32,7 +32,7 @@ public class UserDaoJDBCImpl implements UserDao {
              Statement statement = connection.createStatement()) {
             statement.executeUpdate(sql);
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+           e.printStackTrace();
         }
     }
 
